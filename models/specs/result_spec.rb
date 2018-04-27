@@ -6,13 +6,18 @@ class TestResult < Minitest::Test
 
   def setup()
     options1 = {
+      "id" => 1,
       "player_id" => 1,
       "game_id" => 1,
-      "ammount" => 20
+      "ammount" => 40.50
 
     }
     @result1 = Result.new(options1)
 
+  end
+
+  def test_player_id()
+    assert_equal(1, @result1.id)
   end
 
   def test_player_id()
@@ -24,7 +29,7 @@ class TestResult < Minitest::Test
   end
 
   def test_ammount()
-    assert_equal(20, @result1.ammount)
+    assert_equal(40.50, @result1.ammount)
   end
 
-end #End of TestPlayer class
+end #End of TestResult class
