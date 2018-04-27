@@ -6,8 +6,8 @@ class TestPlayer < Minitest::Test
 
   def setup()
     options1 = {
-      "Name" => "Connor",
-      "Colour" => "Blue"
+      "name" => "Connor",
+      "colour" => "Blue"
     }
     @player1 = Player.new(options1)
 
@@ -18,7 +18,7 @@ class TestPlayer < Minitest::Test
   end
 
   def test_colour()
-    assert_equal("Connor", @player1.colour)
+    assert_equal("Blue", @player1.colour)
   end
 
 end #End of TestPlayer class
